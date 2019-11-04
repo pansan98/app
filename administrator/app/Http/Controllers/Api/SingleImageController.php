@@ -16,11 +16,11 @@ class SingleImageController {
         $this->file_client->setFileDirClient(storage_path() . '/upload/');
         
         
-        $request_file = $request->request->get('files');
+        $request_file = $request->files->get('files');
         $attr = $request->request->get('attr');
         
         $file = [];
-        $file[$attr] = $request_file[0];
+        $file[$attr] = $request_file;
         $this->file_client->setSingleFileClient($file, $attr);
         
         $ret = $this->file_client->registerClient($attr);

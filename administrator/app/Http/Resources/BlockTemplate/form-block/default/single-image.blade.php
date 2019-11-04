@@ -5,7 +5,7 @@
             <div class="header">
                 <h2>画像は1枚まで登録できます。</h2>
             </div>
-            <div class="body">
+            <div class="body <?php echo $block->getName(); ?>_single_uploaded_file_zone">
                 <div id="<?php echo $block->getName(); ?>_FileUpLoad" class="<?php echo $block->getName(); ?>_drop_zone">
                     <div class="dz-message">
                         <div class="drag-icon-cph">
@@ -14,10 +14,11 @@
                         <h3>Drop files here or click to upload.</h3>
                         <em>(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</em>
                     </div>
-                    <div class="fallback">
-                        <input id="<?php echo $block->getName(); ?>_drop_zone" name="<?php echo $block->getName(); ?>" accept="image/*" type="file" style="display: none;"/>
-                    </div>
                 </div>
+            </div>
+
+            <div class="fallback">
+                <input id="<?php echo $block->getName(); ?>_drop_zone_input" name="<?php echo $block->getName(); ?>" accept="image/*" type="text" style="display: none;"/>
             </div>
 
             <script>
@@ -30,35 +31,31 @@
                     });
 
                     drop_zone.addEventListener('drop', function(e) {
-                        $.ajaxSetup({
-                            headers: {
-                                'X-CSRF-TOKEN': $('input[name = _token]').val()
-                            }
-                        });
-
-                        //var requestData = new FormData();
 
                         e.preventDefault();
                         var fileList = (e.target.files) ? e.target.files : e.dataTransfer.files;
-                        var datas = {};
 
-                        datas.files = fileList;
-                        datas.attr = '<?php echo $block->getName(); ?>';
+                        isFileLengthCheck(fileList, 1);
 
-                        //requestData.append('files', fileList);
-                        //requestData.append('attr', '');
+                        var fd = new FormData();
 
-                        console.log(datas);
+                        fd.append('files', fileList[0]);
+                        fd.append('attr', '<?php echo $block->getName(); ?>');
 
                         if(fileList) {
                             $.ajax({
                                 url: endpoint,
                                 type: 'POST',
-                                data: datas,
+                                data: fd,
                                 processData: false,
-                                contentType: false
+                                contentType: false,
+                                dataType: 'json'
                             }).done(function(data) {
-                                console.log(data);
+                                var parse_data = JSON.parse(data.file_obj);
+                                var imageObj = {};
+                                imageObj.src = '<?php echo config('const.root_relative'); ?>storage/upload/'+parse_data.name;
+                                insertImage(imageObj.src);
+                                insertAttrSrc(imageObj.src);
                             }).fail(function(xhr, textStatus, errorThrown) {
                                 console.log(xhr);
                                 console.log(textStatus);
@@ -66,6 +63,22 @@
                             });
                         }
                     });
+
+                    function isFileLengthCheck(files, max) {
+                        if(files.length > max) {
+                            alert('ファイル数が超えています。');
+                        }
+                    }
+
+                    function insertImage(src) {
+                        var insertNode = document.querySelector('.<?php echo $block->getName(); ?>_single_uploaded_file_zone');
+                        insertNode.innerHTML = '<p><img style="width:100%;" src="'+src+'"></p>';
+                    }
+
+                    function insertAttrSrc(src) {
+                        var insertSrcName = document.getElementById('<?php echo $block->getName(); ?>_drop_zone_input');
+                        insertSrcName.setAttribute('value', imageObj.src);
+                    }
                 }
 
                 dragImage();

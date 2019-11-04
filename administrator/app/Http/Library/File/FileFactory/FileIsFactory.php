@@ -16,10 +16,10 @@ class FileIsFactory extends FileFactory {
     public function registerUploadFile($attribute)
     {
         if(isset($this->_fileObj[$attribute])) {
-            $afterFile = $this->_errorObj->isFileSizeType($this->_fileObj[$attribute]->getFileType());
+            $afterFile = $this->_errorObj->isFileSizeType($this->_fileObj[$attribute]);
             if(!$afterFile instanceof FileErrorFactory) {
-                if($this->_errorObj->getIsError()) {
-                    $tempRet = $this->_errorObj->isFileTemplate($this->_fileObj[$attribute]->getFileError());
+                if(!$this->_errorObj->getIsError()) {
+                    $tempRet = $this->_errorObj->isFileTemplate($this->_fileObj[$attribute]);
                     if($tempRet) {
                         $alreadyRet = $this->_errorObj->isAlreadyFile($this->_fileObj[$attribute], $this->getUploadFileDir());
                         if($alreadyRet) {
@@ -44,8 +44,8 @@ class FileIsFactory extends FileFactory {
      */
     public function moveUpload(Factory $obj, $moveDir)
     {
-        $temporary = explode('.', $obj->getFileName());
-        $fileName = time().'_'.$temporary[0].'.'.$temporary[1];
+        $temporary = $obj->getFileName();
+        $fileName = time().'_'.$temporary.'.'.$obj->getFileExtension();
         $sourcePath = $obj->getFileTmpName();
         $movePath = $moveDir.$fileName;
         if(!move_uploaded_file($sourcePath, $movePath)) {

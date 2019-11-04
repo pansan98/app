@@ -4,6 +4,7 @@ namespace App\Http\Library\File\Factory;
 use App\Http\Library\File\FileInterface\FileClientInterface;
 use App\Http\Library\File\FileFactory\FileErrorFactory;
 use App\Http\Library\File\Factory\Factory;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class FileFactory implements FileClientInterface {
     
@@ -25,12 +26,23 @@ class FileFactory implements FileClientInterface {
      */
     public function setFactory($file, $key)
     {
+        if(!isset($this->_fileObj[$key])) {
+            $this->_fileObj[$key] = array();
+        }
+        
         if(!$this->_fileObj[$key] instanceof Factory) {
             $this->_fileObj[$key] = new Factory();
         }
+//        $uploadFile = new UploadedFile();
+//        $uploadFile->getFile
         
-        $this->_fileObj[$key]->setFileName($file[$key]['name'])->setFileType($file[$key]['type'])->setFileSize($file[$key]['size'])->setFileTmpName($file[$key]['tmp_name'])->setFileError($file[$key]['error']);
-        $this->_fileObj[$key]->setFileExtension(end(explode('.', $this->_fileObj[$key]->getFileName())));
+        if(is_object($file[$key]) AND $file[$key] instanceof UploadedFile) {
+            $this->_fileObj[$key]->setFileName($file[$key]->getFilename())->setFileType($file[$key]->getClientMimeType())->setFileSize($file[$key]->getClientSize())->setFileTmpName($file[$key]->getPathname())->setFileError($file[$key]->getError());
+            $this->_fileObj[$key]->setFileExtension($file[$key]->getClientOriginalExtension());
+        } else {
+            $this->_fileObj[$key]->setFileName($file[$key]['name'])->setFileType($file[$key]['type'])->setFileSize($file[$key]['size'])->setFileTmpName($file[$key]['tmp_name'])->setFileError($file[$key]->getError());
+            $this->_fileObj[$key]->setFileExtension(end(explode('.', $this->_fileObj[$key]->getFileName())));
+        }
     }
     
     /**

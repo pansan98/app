@@ -44,6 +44,11 @@ class Form extends BaseForm {
             self::SingleImageSetting('image')
                 ->setFormName('サムネイル画像')
         );
+        
+        $register->registerBlock(
+            self::SingleImageSetting('image-2')
+                ->setFormName('一覧用画像')
+        );
 
     }
 }
