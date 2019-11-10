@@ -88,6 +88,15 @@ class FileClient {
         $this->_fileFactory->setFactory($file, $key);
     }
     
+    /**
+     * ファイル名から削除
+     * @param $name
+     */
+    public function deleteCurrentFileNameClient($name)
+    {
+        $this->_fileFactory->deleteCurrentFileName($name);
+    }
+    
     public function setMultiFileClient($files, $key)
     {
         //TODO 未実装

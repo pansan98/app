@@ -27,4 +27,16 @@ class SingleImageController {
         
         return response()->json(['file_obj' => $ret]);
     }
+    
+    public function deleteSingle(Request $request)
+    {
+        $this->file_client = FileClient::getInstance();
+        $this->file_client->setFileDirClient(storage_path() . '/upload/');
+        
+        $deleteFile = $request->request->get('file');
+        
+        $this->file_client->deleteCurrentFileNameClient($deleteFile);
+        
+        return response()->json(['status' => 200]);
+    }
 }

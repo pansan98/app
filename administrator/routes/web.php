@@ -23,5 +23,3 @@ Route::get('/', function () {
 Route::resource('book', 'BookController');
 
 Route::resource('capture', 'CaptureController');
-
-Route::post('api/v1/upload-single', 'Api\SingleImageController@uploadSingle');

@@ -90,6 +90,14 @@ class FileFactory implements FileClientInterface {
     }
     
     /**
+     * @param $name
+     */
+    public function deleteCurrentFileName($name)
+    {
+        $this->deleteFile($this->getUploadFileDir() . $name);
+    }
+    
+    /**
      * @param $dir
      * @return mixed|void
      */
