@@ -18,5 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('v1/upload-single', 'Api\SingleImageController@uploadSingle');
-
 Route::delete('v1/upload-single', 'Api\SingleImageController@deleteSingle');
+
+Route::post('v1/upload-multi', 'Api\MultiImageController@uploadMulti');
+Route::delete('v1/upload-multi', 'Api\MultiImageController@deleteMulti');

@@ -35,18 +35,7 @@ class Form extends BaseForm {
         );
 
         $register->registerBlock(
-            self::HeadingSetting('heading')
-                ->setFormName('見出し')
-                ->setDefaultHeadingType('h3')
-        );
-
-        $register->registerBlock(
             self::SingleImageSetting('image')
-                ->setFormName('サムネイル画像')
-        );
-    
-        $register->registerBlock(
-            self::SingleImageSetting('image_2')
                 ->setFormName('サムネイル画像')
         );
 

@@ -3,6 +3,7 @@
 namespace App\Http\Library\File;
 
 use App\Http\Library\File\FileFactory\FileIsFactory;
+use App\Http\Library\File\FileFactory\FileMultiFactory;
 use App\Http\Library\File\Factory\Factory;
 use App\Http\Library\File\FileFactory\FileErrorFactory;
 use App\Http\Library\File\FileFactory\ErrorFactory;
@@ -26,7 +27,7 @@ class FileClient {
         if((string)self::$_fileType === 'single') {
             $this->_fileFactory = new FileIsFactory();
         } elseif((string)self::$_fileType === 'multi') {
-            $this->_fileFactory = new FileIsFactory();
+            $this->_fileFactory = new FileMultiFactory();
         }
         
         $this->_fileErrorFactory = new FileErrorFactory();
@@ -60,6 +61,11 @@ class FileClient {
     public function registerClient($attr)
     {
         $ret = $this->_fileFactory->registerUploadFile($attr);
+        
+        if((string)self::$_fileType === 'multi') {
+            return $this->registerMultiClient($ret);
+        }
+        
         if(!$this->_fileErrorFactory->getIsError()) {
             if($ret instanceof Factory) {
                 $data = $this->_fileFactory->moveUpload($ret, $this->_fileFactory->getUploadFileDir());
@@ -82,7 +88,7 @@ class FileClient {
      * @param $file
      * @param $key
      */
-    public function setSingleFileClient($file, $key)
+    public function setFileClient($file, $key)
     {
         $this->_fileFactory->deleteCurrentFile($key);
         $this->_fileFactory->setFactory($file, $key);
@@ -97,6 +103,19 @@ class FileClient {
         $this->_fileFactory->deleteCurrentFileName($name);
     }
     
+    public function registerMultiClient($ret)
+    {
+        $data = [];
+        foreach ($ret as $k => $file) {
+            if($file instanceof Factory) {
+                $data[$k] = $this->_fileFactory->moveUpload($file, $this->_fileFactory->getUploadFileDir());
+            }
+        }
+        
+        return $data;
+    }
+    
+    // 廃止
     public function setMultiFileClient($files, $key)
     {
         //TODO 未実装

@@ -29,4 +29,9 @@ trait BlockSettingTrait {
     {
         return new \App\Http\Component\BlockSetting\SingleImageSetting($name);
     }
+    
+    public static function MultiImageSetting($name)
+    {
+        return new \App\Http\Component\BlockSetting\MultiImageSetting($name);
+    }
 }

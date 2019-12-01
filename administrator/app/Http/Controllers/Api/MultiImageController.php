@@ -5,14 +5,13 @@ namespace App\Http\Controllers\Api;
 use http\Env\Response;
 use Illuminate\Http\Request;
 use App\Http\Library\File\FileClient;
-use App\Http\Views\Views;
 
-class SingleImageController {
+class MultiImageController {
     protected $file_client;
     
-    public function uploadSingle(Request $request)
+    public function uploadMulti(Request $request)
     {
-        FileClient::registerType('single');
+        FileClient::registerType('multi');
         $this->file_client = FileClient::getInstance();
         $this->file_client->setFileDirClient(storage_path() . '/upload/');
         
@@ -24,23 +23,12 @@ class SingleImageController {
         $file[$attr] = $request_file;
         $this->file_client->setFileClient($file, $attr);
         
-        $image_factory = $this->file_client->registerClient($attr);
+        $files = $this->file_client->registerClient($attr);
         
-        $views = new Views();
-        $views->setTheme('api');
-        
-        $html = $views->renderBlock('image.blade.php', [
-            'image_factory' => $image_factory,
-            'attr' => $attr
-        ]);
-        
-        return response()->json([
-            'html' => $html,
-            'name' => $image_factory->getFileName()
-        ]);
+        return response()->json(['file_obj' => $files]);
     }
     
-    public function deleteSingle(Request $request)
+    public function deleteMulti(Request $request)
     {
         $this->file_client = FileClient::getInstance();
         $this->file_client->setFileDirClient(storage_path() . '/upload/');

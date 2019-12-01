@@ -46,6 +46,10 @@ class FileIsFactory extends FileFactory {
     {
         $temporary = $obj->getFileName();
         $fileName = time().'_'.$temporary.'.'.$obj->getFileExtension();
+        
+        // ファイル名更新
+        $obj->setFileName($fileName);
+        
         $sourcePath = $obj->getFileTmpName();
         $movePath = $moveDir.$fileName;
         if(!move_uploaded_file($sourcePath, $movePath)) {
@@ -54,13 +58,16 @@ class FileIsFactory extends FileFactory {
             );
         }
         
-        $result = [
-            'name' => $fileName,
-            'error' => false,
-            'extension' => $obj->getFileExtension()
-        ];
+        return $obj;
         
-        return json_encode($result);
+//        $result = [
+//            'name' => $fileName,
+//            'size' => $obj->getFileSize(),
+//            'error' => false,
+//            'extension' => $obj->getFileExtension()
+//        ];
+//
+//        return json_encode($result);
     }
 }
 ?>

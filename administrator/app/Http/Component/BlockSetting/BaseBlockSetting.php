@@ -62,4 +62,18 @@ class BaseBlockSetting {
         $this->options['values'] = $value;
         return $this;
     }
+    
+    public function setFormTemplate($formTemplate)
+    {
+        $this->options['form_template'] = $formTemplate;
+        
+        return $this;
+    }
+    
+    public function setContentTemplate($contentTemplate)
+    {
+        $this->options['content_template'] = $contentTemplate;
+        
+        return $this;
+    }
 }

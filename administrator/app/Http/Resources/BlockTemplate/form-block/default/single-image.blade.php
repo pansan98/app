@@ -6,6 +6,19 @@
                 <h2>画像は1枚まで登録できます。</h2>
             </div>
             <div class="body <?php echo $block->getName(); ?>_single_uploaded_file_zone">
+
+                <?php if($block->getValue('filename')): ?>
+                    <div class="dz-preview dz-processing dz-error dz-complete dz-image-preview" style="width: 30%; display: inline-block;">
+                        <div>
+                            <div class="dz-image"><img src="<?php echo realpath(Config::get('const.root_relative') . '/../storage/upload/') . $block->getValue('filename'); ?>" style="width: 100%;" data-dz-thumbnail/></div>
+                            <div class="dz-details"><div class="dz-size"><span data-dz-size><strong><?php echo number_format($block->getValue('filesize')); ?></strong>bytes</span></div></div>
+                            <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress style="width: 100%;"></span></div>
+                        </div>
+                        <div class="dz-error-mark"><button type="button" class="btn btn-danger btn-circle waves-effect waves-circle waves-float delete-single-image-<?php echo $block->getName(); ?>"><i class="material-icons" style="left: -11px; top: 4px; font-size: 24px;">content_cut</i></button></div>
+                    </div>
+
+                <?php else: ?>
+
                 <div id="<?php echo $block->getName(); ?>_FileUpLoad" class="<?php echo $block->getName(); ?>_drop_zone">
                     <div class="dz-message">
                         <div class="drag-icon-cph">
@@ -14,6 +27,7 @@
                         <h3>Drop files here or click to upload.</h3>
                     </div>
                 </div>
+                <?php endif; ?>
             </div>
 
             <div class="fallback">
@@ -30,6 +44,7 @@
                         this.endpoint = '<?php echo Config::get('const.admin_root_path'); ?>api/v1/upload-single';
                         this.root_relative = '<?php echo Config::get('const.root_relative'); ?>';
                         this.upload_node = '<div id="'+this.unique_block_name+'_FileUpLoad" class="'+this.unique_block_name+'_drop_zone"><div class="dz-message"><div class="drag-icon-cph"><i class="material-icons" style="text-align: center;display: inherit;">touch_app</i></div><h3>Drop files here or click to upload.</h3></div></div>';
+                        this.mainScreen = document.getElementsByClassName('<?php echo $block->getName(); ?>_single_uploaded_file_zone');
                     }
 
                     dragCurrentImage() {
@@ -44,6 +59,9 @@
 
                         drop_zone.addEventListener('drop', function(e) {
                             e.preventDefault();
+
+                            this_class.enableLoading();
+
                             let fileList = (e.target.files) ? e.target.files : e.dataTransfer.files;
 
                             isFileLengthCheck(fileList, 1);
@@ -63,17 +81,14 @@
                                     dataType: 'json'
                                 }).done(function(data) {
 
-                                    let parse_data = JSON.parse(data.file_obj);
-                                    var imageObj = {};
-                                    imageObj.src = this_class.root_relative + 'storage/upload/'+parse_data.name;
-                                    imageObj.name = parse_data.name;
-
-                                    insertImage(imageObj);
-                                    insertAttrSrc(imageObj);
+                                    insertImage(data);
+                                    insertAttrSrc(data);
                                 }).fail(function(xhr, textStatus, errorThrown) {
                                     console.log(xhr);
                                     console.log(textStatus);
                                     console.log(errorThrown);
+                                }).then(function() {
+                                    this_class.disableLoading();
                                 });
                             }
                         });
@@ -86,7 +101,8 @@
 
                         function insertImage (imageObj) {
                             let insertNode = document.querySelector('.'+api_unique_block_name+'_single_uploaded_file_zone');
-                            insertNode.innerHTML = '<p><img style="width:100%;" src="'+imageObj.src+'"></p><br><p>画像名</p><input type="text" name="'+api_unique_block_name+'[alt]"/><br><p class="btn btn-danger delete-single-image-'+api_unique_block_name+'"><a style="color: white;" href="javascript: void(0);">削除</a></p>';
+
+                            insertNode.innerHTML = imageObj.html;
 
                             // イベント登録
                             const deleteImageBtn = document.querySelector('.delete-single-image-'+api_unique_block_name);
@@ -102,6 +118,8 @@
                     }
 
                     deleteCurrentImage() {
+                        this.enableLoading();
+
                         const api_endpoint = this.endpoint;
                         let insertSrcName = document.getElementById(this.unique_block_name + '_drop_zone_input');
                         let insertNode = document.querySelector('.' + this.unique_block_name + '_single_uploaded_file_zone');
@@ -124,18 +142,113 @@
                                 this_class.dragCurrentImage();
                             }).fail(function(xhr, textStatus, errorThrown) {
                                 //
-                            })
+                            }).then(function() {
+                                this_class.disableLoading();
+                            });
                         }
                     }
 
                     deleteAttrSrc (srcNode) {
                         srcNode.setAttribute('value', '');
                     }
+
+                    enableLoading () {
+
+                        this.mainScreen[0].classList.add('loading-icons-process');
+
+                        // source copy
+                        const loading_html = '<div class="sk-chase">\n' +
+                            '  <div class="sk-chase-dot"></div>\n' +
+                            '  <div class="sk-chase-dot"></div>\n' +
+                            '  <div class="sk-chase-dot"></div>\n' +
+                            '  <div class="sk-chase-dot"></div>\n' +
+                            '  <div class="sk-chase-dot"></div>\n' +
+                            '  <div class="sk-chase-dot"></div>\n' +
+                            '</div>';
+
+                        this.mainScreen[0].insertAdjacentHTML('afterbegin', loading_html);
+                    }
+
+                    disableLoading () {
+                        this.mainScreen[0].classList.remove('loading-icons-process');
+                        // var loading_html = this.mainScreen[0].querySelector('.sk-chase');
+                        // this.mainScreen[0].removeChild(loading_html);
+                    }
                 }
 
                 var singleImage_<?php echo $block->getName(); ?>_class = new SingleImage_<?php echo $block->getName(); ?>_class('<?php echo $block->getName(); ?>');
                 singleImage_<?php echo $block->getName(); ?>_class.dragCurrentImage();
             </script>
+
+            <style>
+                .loading-icons-process::before {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background: #0c5460;
+                    opacity: 0.7;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: inline-block;
+                }
+
+                .sk-chase {
+                    width: 40px;
+                    height: 40px;
+                    position: relative;
+                    animation: sk-chase 2.5s infinite linear both;
+                    left: 47%;
+                }
+
+                .sk-chase-dot {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    animation: sk-chase-dot 2.0s infinite ease-in-out both;
+                }
+
+                .sk-chase-dot:before {
+                    content: '';
+                    display: block;
+                    width: 25%;
+                    height: 25%;
+                    background-color: #fff;
+                    border-radius: 100%;
+                    animation: sk-chase-dot-before 2.0s infinite ease-in-out both;
+                }
+
+                .sk-chase-dot:nth-child(1) { animation-delay: -1.1s; }
+                .sk-chase-dot:nth-child(2) { animation-delay: -1.0s; }
+                .sk-chase-dot:nth-child(3) { animation-delay: -0.9s; }
+                .sk-chase-dot:nth-child(4) { animation-delay: -0.8s; }
+                .sk-chase-dot:nth-child(5) { animation-delay: -0.7s; }
+                .sk-chase-dot:nth-child(6) { animation-delay: -0.6s; }
+                .sk-chase-dot:nth-child(1):before { animation-delay: -1.1s; }
+                .sk-chase-dot:nth-child(2):before { animation-delay: -1.0s; }
+                .sk-chase-dot:nth-child(3):before { animation-delay: -0.9s; }
+                .sk-chase-dot:nth-child(4):before { animation-delay: -0.8s; }
+                .sk-chase-dot:nth-child(5):before { animation-delay: -0.7s; }
+                .sk-chase-dot:nth-child(6):before { animation-delay: -0.6s; }
+
+                @keyframes sk-chase {
+                    100% { transform: rotate(360deg); }
+                }
+
+                @keyframes sk-chase-dot {
+                    80%, 100% { transform: rotate(360deg); }
+                }
+
+                @keyframes sk-chase-dot-before {
+                    50% {
+                        transform: scale(0.4);
+                    } 100%, 0% {
+                          transform: scale(1.0);
+                      }
+                }
+            </style>
         </div>
     </div>
 </div>
