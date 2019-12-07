@@ -44,7 +44,7 @@ class FileIsFactory extends FileFactory {
      */
     public function moveUpload(Factory $obj, $moveDir)
     {
-        $temporary = $obj->getFileName();
+        $temporary = md5($obj->getFileName());
         $fileName = time().'_'.$temporary.'.'.$obj->getFileExtension();
         
         // ファイル名更新

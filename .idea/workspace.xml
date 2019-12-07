@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="822afd43-030f-4ca1-bd94-00ae12b52405" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/administrator/app/Http/Component/BlockForm/MultiImageForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/app/Http/Component/BlockSetting/MUltiImageSetting.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/app/Http/Controllers/Api/MultiImageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/app/Http/Library/File/FileFactory/FileMultiFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/app/Http/Resources/BlockTemplate/form-block/default/multi-image.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/app/Http/Component/BlockSetting/BaseBlockSetting.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/app/Http/Component/BlockSetting/BaseBlockSetting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/app/Http/Controllers/Api/SingleImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/app/Http/Controllers/Api/SingleImageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/app/Http/Form/Book/Form.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/app/Http/Form/Book/Form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/app/Http/Form/Traits/BlockSettingTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/app/Http/Form/Traits/BlockSettingTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/app/Http/Library/File/FileClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/app/Http/Library/File/FileClient.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/administrator/app/Http/Library/File/FileFactory/FileIsFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/app/Http/Library/File/FileFactory/FileIsFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/app/Http/Resources/BlockTemplate/form-block/default/single-image.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/app/Http/Resources/BlockTemplate/form-block/default/single-image.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/app/Http/Library/File/FileFactory/FileMultiFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/app/Http/Library/File/FileFactory/FileMultiFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,13 +43,13 @@
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.12" value="4" />
+          <entry key="project.open.time.12" value="5" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -69,15 +59,15 @@
           <entry key="htaccess" value="288" />
           <entry key="js" value="77" />
           <entry key="json" value="2" />
-          <entry key="php" value="48126" />
+          <entry key="php" value="51077" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="19222" />
+          <entry key="Blade" value="21293" />
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="77" />
-          <entry key="PHP" value="28904" />
+          <entry key="PHP" value="29784" />
           <entry key="PLAIN_TEXT" value="53" />
           <entry key="htaccess" value="288" />
         </counts>
@@ -92,18 +82,19 @@
           <entry key="jpg" value="1" />
           <entry key="js" value="3" />
           <entry key="json" value="2" />
-          <entry key="php" value="482" />
+          <entry key="log" value="3" />
+          <entry key="php" value="508" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="110" />
+          <entry key="Blade" value="118" />
           <entry key="HTML" value="5" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="3" />
-          <entry key="PHP" value="373" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PHP" value="391" />
+          <entry key="PLAIN_TEXT" value="4" />
           <entry key="htaccess" value="3" />
         </counts>
       </usages-collector>
@@ -117,14 +108,59 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/administrator/app/Http/Resources/BlockTemplate/form-block/default/multi-image.blade.php">
+        <entry file="file://$PROJECT_DIR$/administrator/app/Http/Controllers/StorageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="80" column="61" lean-forward="true" selection-start-line="80" selection-start-column="61" selection-end-line="80" selection-end-column="61" />
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/administrator/config/user/const.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="56" lean-forward="true" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/administrator/app/Http/Library/File/Factory/FileFactory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="92" column="19" lean-forward="true" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/administrator/app/Http/Library/File/FileFactory/FileIsFactory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/administrator/resources/views/base/base.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/administrator/resources/views/storage/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="37" column="41" lean-forward="true" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
               <folding>
-                <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#p#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#p#2;n#!!top" expanded="true" />
+                <element signature="e#1207#1254#0#HTML" expanded="true" />
+                <element signature="e#1247#1270#0#HTML" expanded="true" />
+                <element signature="e#2993#3044#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,8 +169,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/administrator/app/Http/Controllers/Api/SingleImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+            <state relative-caret-position="330">
+              <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
               <folding>
                 <element signature="e#44#66#0#PHP" expanded="true" />
               </folding>
@@ -142,14 +178,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/administrator/app/Http/Resources/BlockTemplate/form-block/default/single-image.blade.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/administrator/app/Http/Controllers/BookController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="160" column="68" lean-forward="true" selection-start-line="160" selection-start-column="68" selection-end-line="160" selection-end-column="68" />
-              <folding>
-                <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="300">
+              <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -183,10 +216,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/administrator/resources/views/layout/right-side.blade.php" />
-        <option value="$PROJECT_DIR$/administrator/resources/views/layout/navigations.blade.php" />
-        <option value="$PROJECT_DIR$/administrator/resources/views/layout/sides.blade.php" />
-        <option value="$PROJECT_DIR$/../admin-bootstrap/pages/tables/normal-tables.html" />
         <option value="$PROJECT_DIR$/administrator/app/Http/Controllers/Controller.php" />
         <option value="$PROJECT_DIR$/administrator/resources/views/layout/navigation.blade.php" />
         <option value="$PROJECT_DIR$/administrator/resources/views/layout/left-side.blade.php" />
@@ -214,8 +243,6 @@
         <option value="$PROJECT_DIR$/administrator/resources/views/layout/head.blade.php" />
         <option value="$PROJECT_DIR$/../test.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/administrator/routes/web.php" />
-        <option value="$PROJECT_DIR$/administrator/app/Http/Library/File/Factory/FileFactory.php" />
         <option value="$PROJECT_DIR$/administrator/resources/js/block-js/single-image.js" />
         <option value="$PROJECT_DIR$/administrator/resources/views/layout/javascript.blade.php" />
         <option value="$PROJECT_DIR$/administrator/app/Http/Component/BlockSetting/MUltiImageSetting.php" />
@@ -224,16 +251,22 @@
         <option value="$PROJECT_DIR$/administrator/app/Http/Component/BlockForm/MultiImageForm.php" />
         <option value="$PROJECT_DIR$/administrator/app/Http/Component/BlockSetting/BaseBlockSetting.php" />
         <option value="$PROJECT_DIR$/administrator/routes/api.php" />
-        <option value="$PROJECT_DIR$/administrator/app/Http/Library/File/FileFactory/FileMultiFactory.php" />
         <option value="$PROJECT_DIR$/administrator/app/Http/Library/File/FileClient.php" />
         <option value="$PROJECT_DIR$/administrator/app/Http/Controllers/Api/MultiImageController.php" />
-        <option value="$PROJECT_DIR$/administrator/app/Http/Library/File/FileFactory/FileIsFactory.php" />
         <option value="$PROJECT_DIR$/administrator/app/Http/Views/Views.php" />
         <option value="$PROJECT_DIR$/administrator/app/Http/Controllers/Api/SingleImageController.php" />
         <option value="$PROJECT_DIR$/administrator/app/Http/Resources/BlockTemplate/form-block/default/multi-image.blade.php" />
         <option value="$PROJECT_DIR$/administrator/app/Http/Form/Book/Form.php" />
         <option value="$PROJECT_DIR$/administrator/app/Http/Resources/BlockTemplate/form-block/default/single-image.blade.php" />
         <option value="$PROJECT_DIR$/administrator/app/Http/Resources/BlockTemplate/form-block/api/image.blade.php" />
+        <option value="$PROJECT_DIR$/administrator/app/Http/Library/File/FileFactory/FileMultiFactory.php" />
+        <option value="$PROJECT_DIR$/administrator/app/Http/Library/File/Factory/FileFactory.php" />
+        <option value="$PROJECT_DIR$/administrator/routes/web.php" />
+        <option value="$PROJECT_DIR$/../../logs/apache_error.log" />
+        <option value="$PROJECT_DIR$/../../logs/php_error.log" />
+        <option value="$PROJECT_DIR$/administrator/app/Http/Controllers/StorageController.php" />
+        <option value="$PROJECT_DIR$/administrator/resources/views/storage/index.blade.php" />
+        <option value="$PROJECT_DIR$/administrator/app/Http/Library/File/FileFactory/FileIsFactory.php" />
       </list>
     </option>
   </component>
@@ -252,6 +285,7 @@
       <path value="$PROJECT_DIR$/administrator/vendor/facade/ignition/package.json" />
     </packageJsonPaths>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="95104286-c642-44e8-8f33-b3081ac4f6a5" name="localhost" />
@@ -347,10 +381,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="178" />
-    <option name="y" value="119" />
-    <option name="width" value="1742" />
-    <option name="height" value="961" />
+    <option name="x" value="268" />
+    <option name="y" value="92" />
+    <option name="width" value="1652" />
+    <option name="height" value="988" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -381,6 +415,13 @@
               <item name="Laravel_practice" type="462c0819:PsiDirectoryNode" />
               <item name="administrator" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Laravel_practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laravel_practice" type="462c0819:PsiDirectoryNode" />
+              <item name="administrator" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -389,7 +430,7 @@
               <item name="administrator" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Library" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Laravel_practice" type="b2602c69:ProjectViewProjectNode" />
@@ -397,8 +438,8 @@
               <item name="administrator" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Api" type="462c0819:PsiDirectoryNode" />
+              <item name="Library" type="462c0819:PsiDirectoryNode" />
+              <item name="File" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Laravel_practice" type="b2602c69:ProjectViewProjectNode" />
@@ -406,7 +447,9 @@
               <item name="administrator" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="Library" type="462c0819:PsiDirectoryNode" />
+              <item name="File" type="462c0819:PsiDirectoryNode" />
+              <item name="Factory" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Laravel_practice" type="b2602c69:ProjectViewProjectNode" />
@@ -414,40 +457,9 @@
               <item name="administrator" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="BlockTemplate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Laravel_practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Laravel_practice" type="462c0819:PsiDirectoryNode" />
-              <item name="administrator" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="BlockTemplate" type="462c0819:PsiDirectoryNode" />
-              <item name="form-block" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Laravel_practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Laravel_practice" type="462c0819:PsiDirectoryNode" />
-              <item name="administrator" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="BlockTemplate" type="462c0819:PsiDirectoryNode" />
-              <item name="form-block" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Laravel_practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Laravel_practice" type="462c0819:PsiDirectoryNode" />
-              <item name="administrator" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="BlockTemplate" type="462c0819:PsiDirectoryNode" />
-              <item name="form-block" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="Library" type="462c0819:PsiDirectoryNode" />
+              <item name="File" type="462c0819:PsiDirectoryNode" />
+              <item name="FileFactory" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Laravel_practice" type="b2602c69:ProjectViewProjectNode" />
@@ -461,6 +473,35 @@
               <item name="administrator" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Laravel_practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laravel_practice" type="462c0819:PsiDirectoryNode" />
+              <item name="administrator" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Laravel_practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laravel_practice" type="462c0819:PsiDirectoryNode" />
+              <item name="administrator" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Laravel_practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laravel_practice" type="462c0819:PsiDirectoryNode" />
+              <item name="administrator" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Laravel_practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laravel_practice" type="462c0819:PsiDirectoryNode" />
+              <item name="administrator" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Laravel_practice" type="b2602c69:ProjectViewProjectNode" />
@@ -480,13 +521,6 @@
               <item name="administrator" type="462c0819:PsiDirectoryNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Laravel_practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Laravel_practice" type="462c0819:PsiDirectoryNode" />
-              <item name="administrator" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -550,24 +584,25 @@
       <workItem from="1573969318287" duration="3919000" />
       <workItem from="1573975447187" duration="10593000" />
       <workItem from="1573999234901" duration="947000" />
+      <workItem from="1575706900564" duration="6200000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105375000" />
+    <option name="totallyTimeSpent" value="111575000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="178" y="119" width="1742" height="961" extended-state="0" />
+    <frame x="268" y="92" width="1652" height="988" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49940687" visible="true" weight="0.16823529" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49940687" visible="true" weight="0.17950311" />
       <window_info id="Structure" order="1" sideWeight="0.5005931" side_tool="true" weight="0.16138855" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3912543" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.390625" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -612,44 +647,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/administrator/resources/views/book/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Requests/BookRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Middleware/VerifyCsrfToken.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="45" column="62" lean-forward="true" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/administrator/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
@@ -686,29 +683,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/administrator/routes/channels.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="50" column="54" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/resources/views/base/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/administrator/resources/js/block-js/single-image.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -721,20 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/resources/views/base/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/resources/views/base/base.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -829,24 +791,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Library/File/Factory/FileFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/administrator/app/Http/Library/File/FileFactory/ErrorFactory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Library/File/FileFactory/FileMultiFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -878,63 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Library/File/Factory/Factory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="128" column="33" lean-forward="true" selection-start-line="128" selection-start-column="33" selection-end-line="128" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Library/File/FileFactory/FileIsFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="53" column="39" lean-forward="true" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Library/File/FileClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding>
-            <element signature="e#41#93#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Controllers/BookController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/config/user/const.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="60" lean-forward="true" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Component/BlockForm/HeadingForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Resources/BlockTemplate/form-block/default/multi-image.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="80" column="61" lean-forward="true" selection-start-line="80" selection-start-column="61" selection-end-line="80" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#p#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/administrator/app/Http/Resources/BlockTemplate/form-block/api/image.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -945,33 +836,175 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Form/Book/Form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="45" lean-forward="true" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Component/BlockForm/HeadingForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/resources/views/base/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="56" lean-forward="true" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Resources/BlockTemplate/form-block/default/multi-image.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Library/File/Factory/Factory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="128" column="33" selection-start-line="128" selection-start-column="33" selection-end-line="128" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Resources/BlockTemplate/form-block/default/single-image.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Controllers/BookController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../logs/apache_error.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../logs/php_error.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/resources/views/base/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/vendor/laravel/framework/src/Illuminate/Routing/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="707" column="30" selection-start-line="707" selection-start-column="30" selection-end-line="707" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/vendor/laravel/framework/src/Illuminate/Routing/SortedMiddleware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/resources/views/base/base.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/resources/views/storage/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="37" column="41" lean-forward="true" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+          <folding>
+            <element signature="e#1207#1254#0#HTML" expanded="true" />
+            <element signature="e#1247#1270#0#HTML" expanded="true" />
+            <element signature="e#2993#3044#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Controllers/StorageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/administrator/app/Http/Controllers/Api/SingleImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        <state relative-caret-position="330">
+          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
           <folding>
             <element signature="e#44#66#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Form/Book/Form.php">
+    <entry file="file://$PROJECT_DIR$/administrator/config/user/const.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="45" lean-forward="true" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+        <state relative-caret-position="210">
+          <caret line="14" column="56" lean-forward="true" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Library/File/FileFactory/FileIsFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Library/File/FileFactory/FileMultiFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Library/File/FileClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="70" column="54" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
           <folding>
-            <element signature="e#38#65#0#PHP" expanded="true" />
+            <element signature="e#41#93#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Resources/BlockTemplate/form-block/default/single-image.blade.php">
+    <entry file="file://$PROJECT_DIR$/administrator/app/Http/Library/File/Factory/FileFactory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="160" column="68" lean-forward="true" selection-start-line="160" selection-start-column="68" selection-end-line="160" selection-end-column="68" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="249">
+          <caret line="92" column="19" lean-forward="true" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
         </state>
       </provider>
     </entry>

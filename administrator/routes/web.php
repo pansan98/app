@@ -23,3 +23,5 @@ Route::get('/', function () {
 Route::resource('book', 'BookController');
 
 Route::resource('capture', 'CaptureController');
+
+Route::resource('storage', 'StorageController');
