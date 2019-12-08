@@ -1,16 +1,16 @@
 <!-- Search Bar -->
-<div class="search-bar">
+<div class="search-bar bg-white border-bottom">
     <div class="search-icon">
         <i class="material-icons">search</i>
     </div>
-    <input type="text" placeholder="START TYPING...">
+    <input type="text" placeholder="START TYPING..." style="margin-bottom: 0; padding-top: 15px; padding-bottom: 10px;">
     <div class="close-search">
         <i class="material-icons">close</i>
     </div>
 </div>
 <!-- #END# Search Bar -->
 <!-- Top Bar -->
-<nav class="navbar">
+<nav class="navbar" style="margin-bottom: 0;">
     <div class="container-fluid">
         <div class="navbar-header">
             <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
@@ -20,11 +20,11 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <!-- Call Search -->
-                <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
+                <li><a href="javascript:void(0);" class="js-search" data-close="true" style="margin-top: 0;"><i class="material-icons">search</i></a></li>
                 <!-- #END# Call Search -->
                 <!-- Notifications -->
                 <li class="dropdown">
-                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" style="margin-top:0;">
                         <i class="material-icons">notifications</i>
                         <span class="label-count">7</span>
                     </a>
@@ -133,7 +133,7 @@
                 <!-- #END# Notifications -->
                 <!-- Tasks -->
                 <li class="dropdown">
-                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" style="margin-top: 0;">
                         <i class="material-icons">flag</i>
                         <span class="label-count">9</span>
                     </a>
@@ -209,7 +209,7 @@
                     </ul>
                 </li>
                 <!-- #END# Tasks -->
-                <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="material-icons">more_vert</i></a></li>
+                <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true" style="margin-top: 0;"><i class="material-icons">more_vert</i></a></li>
             </ul>
         </div>
     </div>

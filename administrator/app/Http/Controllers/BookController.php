@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\BookRequest;
-use App\Http\Controllers\Controller;
 use App\Book;
 use App\Http\Form\Book\Form;
+use App\Http\Controllers\RelativeController;
 
-class BookController extends Controller
+class BookController extends RelativeController
 {
     protected $entityClass = Book::class;
     protected $formSetting = Form::class;
@@ -91,13 +91,4 @@ class BookController extends Controller
         return $columns;
     }
     
-    
-    private function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => 'required',
-            'price' => 'required|int',
-            'author' => 'required'
-        ]);
-    }
 }

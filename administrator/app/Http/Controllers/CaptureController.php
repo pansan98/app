@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\RelativeController;
 use App\Capture;
 use JonnyW\PhantomJs\Client;
 
-class CaptureController extends Controller
+class CaptureController extends RelativeController
 {
     protected $entityClass = Capture::class;
     

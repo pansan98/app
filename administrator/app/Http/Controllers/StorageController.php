@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\RelativeController;
 
-class StorageController extends Controller
+class StorageController extends RelativeController
 {
     //
     public function index()

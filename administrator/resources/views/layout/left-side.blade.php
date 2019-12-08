@@ -1,4 +1,4 @@
-<aside id="leftsidebar" class="sidebar">
+<aside id="leftsidebar" class="sidebar" style="top: 65px;">
     <!-- User Info -->
     {{--<div class="user-info">--}}
         {{--<div class="image">--}}
@@ -27,23 +27,30 @@
         <ul class="list">
             <li class="header">MAIN NAVIGATION</li>
             <li>
-                <a href="../../index.html">
+                <a href="{{ route('home') }}">
                     <i class="material-icons">home</i>
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="../../pages/typography.html">
-                    <i class="material-icons">text_fields</i>
-                    <span>Typography</span>
+                <a href="{{ route('book.index') }}">
+                    <i class="material-icons">create</i>
+                    <span>Book</span>
                 </a>
             </li>
             <li>
-                <a href="../../pages/helper-classes.html">
-                    <i class="material-icons">layers</i>
-                    <span>Helper Classes</span>
+                <a href="{{ route('storage.index') }}">
+                    <i class="material-icons">backup</i>
+                    <span>Storage</span>
                 </a>
             </li>
+            <li>
+                <a href="{{ route('capture.index') }}">
+                    <i class="material-icons">add_to_photos</i>
+                    <span>URL ScreenShot</span>
+                </a>
+            </li>
+            <?php if(false): ?>
             <li>
                 <a href="javascript:void(0);" class="menu-toggle">
                     <i class="material-icons">widgets</i>
@@ -361,6 +368,7 @@
                     <span>Information</span>
                 </a>
             </li>
+            <?php endif; ?>
         </ul>
     </div>
     <!-- #Menu -->

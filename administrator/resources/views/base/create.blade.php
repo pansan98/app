@@ -1,4 +1,4 @@
-@extends('base/base')
+@extends('base.base')
 
 @section('content')
     <section class="content">

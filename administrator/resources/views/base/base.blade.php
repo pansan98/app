@@ -1,4 +1,4 @@
-@include('layout/head')
+@include('layout.head')
 
 <body class="theme-red">
 
@@ -31,3 +31,4 @@
 
     @include('layout/javascript')
 </body>
+</html>
