@@ -3,7 +3,7 @@
 <section class="content">
     <div class="container-fluid">
         <div class="block-header">
-            <h2>Storage management</h2>
+            <h2>Media management</h2>
             <small>
                 This page opens the contents of the storage where the uploaded image is stored at the time of data creation.<br>
                 registered after uploading will not be displayed.
@@ -11,8 +11,11 @@
         </div>
 
         <div class="row clearfix">
-            <?php if(!empty($storage_files)): ?>
-            <?php foreach($storage_files as $file): ?>
+            <div class="m-b-20 m-t--20">
+                <a href="{{ route('media.create') }}" class="btn btn-primary m-t-15 waves-effect">新規作成</a>
+            </div>
+            <?php if(!empty($data)): ?>
+            <?php foreach($data as $d): ?>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="card">
                     <div class="header">
@@ -24,13 +27,13 @@
                                 </a>
                                 <ul class="dropdown-menu pull-right" style="top: 60px; background:none;box-shadow: none;">
                                     <li style="margin-bottom: 5px;">
-                                        <form action="<?php echo Config::get('const.admin_root_path') . 'client-storage/' . $file['filename']; ?>" method="post" name="storage_upload">
+                                        <form action="<?php echo Config::get('const.admin_root_path') . 'storage/' . $file['filename']; ?>" method="post" name="storage_upload">
                                             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                                             <button type="submit" class="btn btn-xs btn-info" aria-label="Left Align"><span class="glyphicon glyphicon-save">アップロード</span></button>
                                         </form>
                                     </li>
                                     <li>
-                                        <form action="<?php echo Config::get('const.admin_root_path') . 'client-storage/' . $file['filename']; ?>" method="post" name="storage_delete">
+                                        <form action="<?php echo Config::get('const.admin_root_path') . 'storage/' . $file['filename']; ?>" method="post" name="storage_delete">
                                             <input type="hidden" name="_method" value="DELETE">
                                             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                                             <button type="submit" class="btn btn-xs btn-danger" aria-label="Left Align"><span class="glyphicon glyphicon-trash">削除</span></button>
@@ -53,7 +56,7 @@
             </div>
             <?php endforeach; ?>
             <?php else:?>
-                <p>There is no data in storage.</p>
+                <p>There is no data in media.</p>
             <?php endif; ?>
         </div>
     </div>

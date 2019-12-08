@@ -11,6 +11,6 @@
         'root_path' => $rootPath,
         'root_dir' => $rootDir . '/',
         'root_relative' => $rootRelative . 'administrator/',
-        'admin_root_path' => $rootPath . 'administrator/public/',
+        'admin_root_path' => $rootPath . 'administrator/',
         'admin_root_dir' => $rootDir . '/administrator/'
     ];

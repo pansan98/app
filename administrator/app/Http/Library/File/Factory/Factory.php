@@ -5,6 +5,8 @@ class Factory {
     
     protected $file_name;
     
+    protected $file_original_name;
+    
     protected $file_type;
     
     protected $file_size;
@@ -12,6 +14,10 @@ class Factory {
     protected $file_tmp_name;
     
     protected $file_extension;
+    
+    protected $file_width;
+    
+    protected $file_height;
     
     protected $file_error;
     
@@ -32,6 +38,18 @@ class Factory {
     public function getFileName()
     {
         return $this->file_name;
+    }
+    
+    public function getFileOriginalName()
+    {
+        return $this->file_original_name;
+    }
+    
+    public function setFileOriginalName($original_name)
+    {
+        $this->file_original_name = $original_name;
+        
+        return $this;
     }
     
     /**
@@ -108,6 +126,44 @@ class Factory {
     public function getFileExtension()
     {
         return $this->file_extension;
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function getFileWidth()
+    {
+        return $this->file_width;
+    }
+    
+    /**
+     * @param $width
+     * @return $this
+     */
+    public function setFileWidth($width)
+    {
+        $this->file_width = $width;
+        
+        return $this;
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function getFileHeight()
+    {
+        return $this->file_height;
+    }
+    
+    /**
+     * @param $height
+     * @return $this
+     */
+    public function setFileHeight($height)
+    {
+        $this->file_height = $height;
+        
+        return $this;
     }
     
     /**

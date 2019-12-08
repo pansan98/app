@@ -7,6 +7,14 @@
         <?php if($image_factory->getFileError()): ?>
         <div class="dz-error-message"><span class="data-dz-errormessage"><?php echo $image_factory->getFileError(); ?></span></div>
         <?php endif; ?>
+
+        <input type="hidden" name="width" value="<?php echo $image_factory->getFileWidth(); ?>"/>
+        <input type="hidden" name="height" value="<?php echo $image_factory->getFileHeight(); ?>"/>
+        <input type="hidden" name="extension" value="<?php echo $image_factory->getFileExtension(); ?>"/>
+        <input type="hidden" name="mime_type" value="<?php echo $image_factory->getFileType(); ?>"/>
+        <input type="hidden" name="size" value="<?php echo $image_factory->getFileSize(); ?>"/>
+        <input type="hidden" name="original_name" value="<?php echo $image_factory->getFileOriginalName(); ?>"/>
+        <input type="hidden" name="file_name" value="<?php echo $image_factory->getFileName(); ?>"/>
     </div>
     <div class="dz-error-mark"><button style="height: 60px;" type="button" class="btn btn-danger btn-circle waves-effect waves-circle waves-float delete-single-image-<?php echo $attr; ?>"><i class="material-icons" style="left: -11px; top: 4px; font-size: 24px;">content_cut</i></button></div>
 </div>

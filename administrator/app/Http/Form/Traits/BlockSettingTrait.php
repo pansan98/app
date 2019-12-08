@@ -34,4 +34,9 @@ trait BlockSettingTrait {
     {
         return new \App\Http\Component\BlockSetting\MultiImageSetting($name);
     }
+    
+    public static function MediaImageSetting($name)
+    {
+        return new \App\Http\Component\BlockSetting\MediaImageSetting($name);
+    }
 }

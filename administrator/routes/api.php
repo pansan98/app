@@ -22,3 +22,6 @@ Route::delete('v1/upload-single', 'Api\SingleImageController@deleteSingle');
 
 Route::post('v1/upload-multi', 'Api\MultiImageController@uploadMulti');
 Route::delete('v1/upload-multi', 'Api\MultiImageController@deleteMulti');
+
+Route::post('v1/upload-media', 'Api\MediaImageController@uploadMedia');
+Route::delete('v1/upload-media', 'Api\MediaImageController@deleteMedia');

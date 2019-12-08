@@ -44,7 +44,7 @@ class FileIsFactory extends FileFactory {
      */
     public function moveUpload(Factory $obj, $moveDir)
     {
-        $temporary = md5($obj->getFileName());
+        $temporary = md5($obj->getFileOriginalName());
         $fileName = time().'_'.$temporary.'.'.$obj->getFileExtension();
         
         // ファイル名更新
@@ -57,6 +57,10 @@ class FileIsFactory extends FileFactory {
                 'File upload failed. Please check the permissions.'
             );
         }
+        
+        $image_size = getimagesize($movePath);
+        $obj->setFileWidth($image_size[0]);
+        $obj->setFileHeight($image_size[1]);
         
         return $obj;
         

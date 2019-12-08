@@ -39,15 +39,21 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('storage.index') }}">
-                    <i class="material-icons">backup</i>
-                    <span>Storage</span>
-                </a>
-            </li>
-            <li>
                 <a href="{{ route('capture.index') }}">
                     <i class="material-icons">add_to_photos</i>
                     <span>URL ScreenShot</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('media.index') }}">
+                    <i class="material-icons">add_to_photos</i>
+                    <span>Media</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('client-storage.index') }}">
+                    <i class="material-icons">backup</i>
+                    <span>Storage</span>
                 </a>
             </li>
             <?php if(false): ?>

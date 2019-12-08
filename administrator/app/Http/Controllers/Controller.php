@@ -29,6 +29,18 @@ class Controller extends BaseController
         return $aoColumns;
     }
     
+    public function create()
+    {
+        $blocks = new $this->formSetting();
+        $base_name = $blocks->getName();
+        $blocks->loadForm($blocks->getRegisterSettings());
+        
+        $action = $this->createFormAction();
+        $status = 'create';
+        
+        return view('base/create', compact("blocks", "base_name", "action", "status"));
+    }
+    
     protected function getSortTableOptions($aoColumns = [])
     {
     }

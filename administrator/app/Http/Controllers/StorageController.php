@@ -36,6 +36,6 @@ class StorageController extends RelativeController
             @unlink($storage . $filename);
         }
         
-        return redirect('/storage');
+        return redirect('/client-storage');
     }
 }

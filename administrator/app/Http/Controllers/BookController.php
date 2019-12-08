@@ -31,14 +31,7 @@ class BookController extends RelativeController
     
     public function create()
     {
-        $blocks = new $this->formSetting();
-        $base_name = $blocks->getName();
-        $blocks->loadForm($blocks->getRegisterSettings());
-        
-        $action = $this->createFormAction();
-        $status = 'create';
-        
-        return view('base/create', compact("blocks", "base_name", "action", "status"));
+        return parent::create();
     }
     
     public function store(BookRequest $request)

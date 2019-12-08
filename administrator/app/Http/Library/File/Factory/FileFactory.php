@@ -37,7 +37,7 @@ class FileFactory implements FileClientInterface {
 //        $uploadFile->getFile
         
         if(is_object($file[$key]) AND $file[$key] instanceof UploadedFile) {
-            $this->_fileObj[$key]->setFileName($file[$key]->getFilename())->setFileType($file[$key]->getClientMimeType())->setFileSize($file[$key]->getClientSize())->setFileTmpName($file[$key]->getPathname())->setFileError($file[$key]->getError());
+            $this->_fileObj[$key]->setFileOriginalName($file[$key]->getClientOriginalName())->setFileType($file[$key]->getClientMimeType())->setFileSize($file[$key]->getClientSize())->setFileTmpName($file[$key]->getPathname())->setFileError($file[$key]->getError());
             $this->_fileObj[$key]->setFileExtension($file[$key]->getClientOriginalExtension());
         } else {
             $this->_fileObj[$key]->setFileName($file[$key]['name'])->setFileType($file[$key]['type'])->setFileSize($file[$key]['size'])->setFileTmpName($file[$key]['tmp_name'])->setFileError($file[$key]->getError());

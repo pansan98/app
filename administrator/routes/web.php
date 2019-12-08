@@ -28,4 +28,6 @@ Route::resource('book', 'BookController');
 
 Route::resource('capture', 'CaptureController');
 
-Route::resource('storage', 'StorageController');
+Route::resource('client-storage', 'StorageController');
+
+Route::resource('media', 'MediaController');
