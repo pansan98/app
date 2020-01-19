@@ -19,6 +19,8 @@ class MediaImageController {
         
         $request_file = $request->files->get('files');
         $attr = $request->request->get('attr');
+        $number = $request->request->get('number');
+        $number = (int)$number + 1;
         
         $file = [];
         $file[$attr] = $request_file;
@@ -31,12 +33,14 @@ class MediaImageController {
         
         $html = $views->renderBlock('media.blade.php', [
             'image_factory' => $image_factory,
-            'attr' => $attr
+            'attr' => $attr,
+            'number' => $number
         ]);
         
         return response()->json([
             'html' => $html,
-            'name' => $image_factory->getFileName()
+            'name' => $image_factory->getFileName(),
+            'number' => $number
         ]);
     }
     

@@ -24,16 +24,17 @@
                                 </a>
                                 <ul class="dropdown-menu pull-right" style="top: 60px; background:none;box-shadow: none;">
                                     <li style="margin-bottom: 5px;">
-                                        <form action="<?php echo Config::get('const.admin_root_path') . 'client-storage/' . $file['filename']; ?>" method="post" name="storage_upload">
+                                        <form action="<?php echo Config::get('const.admin_root_path') . 'client-storage'; ?>" method="post" name="storage_upload">
                                             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-                                            <button type="submit" class="btn btn-xs btn-info" aria-label="Left Align"><span class="glyphicon glyphicon-save">アップロード</span></button>
+                                            <input type="hidden" name="file_name" value="<?php echo $file['filename']; ?>"/>
+                                            <button type="submit" class="btn btn-xs btn-info btn-button-layout" aria-label="Left Align"><span class="glyphicon glyphicon-save">アップロード</span></button>
                                         </form>
                                     </li>
                                     <li>
                                         <form action="<?php echo Config::get('const.admin_root_path') . 'client-storage/' . $file['filename']; ?>" method="post" name="storage_delete">
                                             <input type="hidden" name="_method" value="DELETE">
                                             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-                                            <button type="submit" class="btn btn-xs btn-danger" aria-label="Left Align"><span class="glyphicon glyphicon-trash">削除</span></button>
+                                            <button type="submit" class="btn btn-xs btn-danger btn-button-layout" aria-label="Left Align"><span class="glyphicon glyphicon-trash">削除</span></button>
                                         </form>
                                     </li>
                                 </ul>
@@ -56,6 +57,13 @@
                 <p>There is no data in storage.</p>
             <?php endif; ?>
         </div>
+
+        <style>
+            .btn-button-layout {
+                float: right;
+                margin-bottom: 5px;
+            }
+        </style>
     </div>
 </section>
 @endsection

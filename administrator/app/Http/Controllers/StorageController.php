@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\RelativeController;
+use App\Http\Helper\MediaHelper;
+use App\Http\Helper\MediaUploadHelper;
 
 class StorageController extends RelativeController
 {
@@ -18,9 +20,11 @@ class StorageController extends RelativeController
     
             foreach ($storage_dir as $k => $file) {
                 // Only file name
-                $storage_files[$k]['filetime'] = filemtime($file);
-                $storage_files[$k]['filename'] = str_replace($storage, '', $file);
+                $storage_files[filemtime($file).'_'.$k]['filetime'] = filemtime($file);
+                $storage_files[filemtime($file).'_'.$k]['filename'] = str_replace($storage, '', $file);
             }
+            
+            krsort($storage_files);
         }
         
         $storage_path = config('const.root_relative') . 'storage/upload/';
@@ -28,13 +32,23 @@ class StorageController extends RelativeController
         return view('storage/index', compact("storage_files", "storage_path"));
     }
     
+    public function store(Request $request)
+    {
+        if(isset($request->file_name)) {
+            $file_name = $request->file_name;
+            $mediaUpload = new MediaUploadHelper();
+    
+            $id = $mediaUpload->loadFile($file_name);
+        }
+        
+        return redirect('/client-storage');
+    }
+    
     public function destroy($filename)
     {
         $storage = storage_path() . '/upload/';
         
-        if(file_exists($storage . $filename)) {
-            @unlink($storage . $filename);
-        }
+        MediaHelper::delete($storage . $filename);
         
         return redirect('/client-storage');
     }

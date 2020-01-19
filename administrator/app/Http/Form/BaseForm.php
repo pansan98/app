@@ -16,6 +16,11 @@ class BaseForm {
     protected $action_name = null;
     protected $loaded_form = [];
     
+    /**
+     * フォームセッティング
+     *
+     * @return register
+     */
     protected function register()
     {
         $this->register = new register();
@@ -29,6 +34,11 @@ class BaseForm {
         return $this->register;
     }
     
+    /**
+     * アクションのすべてのフォームセッティングを取得する
+     *
+     * @return array|null
+     */
     public function getRegisterSettings()
     {
         $this->register();
@@ -36,6 +46,9 @@ class BaseForm {
         return $this->register->getRegisterBlocks();
     }
     
+    /**
+     * ブロックのレンダリング
+     */
     public function renderBlocks()
     {
         $views = new Views();
@@ -45,6 +58,12 @@ class BaseForm {
         }
     }
     
+    /**
+     * フォームのローディングを行う
+     *
+     * @param $settings
+     * @param null $entity
+     */
     public function loadForm($settings, $entity = null)
     {
         foreach ($settings as $name => $setting) {
@@ -57,6 +76,12 @@ class BaseForm {
         }
     }
     
+    /**
+     * データの読み込み
+     *
+     * @param $loadForm
+     * @param $entity
+     */
     protected function loadEntity($loadForm, $entity)
     {
         if(!empty($entity)) {
@@ -64,11 +89,21 @@ class BaseForm {
         }
     }
     
+    /**
+     * フォーム名を取得する
+     *
+     * @return null
+     */
     public function getName()
     {
         return $this->name;
     }
     
+    /**
+     * アクション名を取得する
+     *
+     * @return null
+     */
     public function getActionName()
     {
         return $this->action_name;

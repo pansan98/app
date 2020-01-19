@@ -8,7 +8,7 @@ use Illuminate\Foundation\Testing\Constraints;
 
 class Form extends BaseForm {
     
-    protected $name = 'メディアライブラリ';
+    protected $name = 'メディアアップロード';
     protected $action_name = 'media';
     
     protected function register()

@@ -7,5 +7,3 @@
     <title>Laravel Practice</title>
     @include('layout/stylesheet')
 </head>
-
-</html>

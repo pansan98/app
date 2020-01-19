@@ -31,8 +31,10 @@
             </div>
 
             <div class="fallback">
-                <input id="<?php echo $block->getName(); ?>_drop_zone_input" name="<?php echo $block->getName(); ?>[name]" accept="image/*" type="text" style="display: none;"/>
+                <input id="<?php echo $block->getName(); ?>_drop_zone_input" name="<?php echo $block->getName(); ?>[][name]" accept="image/*" type="text" style="display: none;"/>
             </div>
+
+            <input type="hidden" id="<?php echo $block->getName(); ?>_drop_zone_number" name="<?php echo $block->getName(); ?>_number" value="1" disabled/>
 
 
             <script>
@@ -66,10 +68,13 @@
 
                             isFileLengthCheck(fileList, 1);
 
+                            let fileNumberElem = document.getElementById('<?php echo $block->getName(); ?>_drop_zone_number');
+
                             let fd = new FormData();
 
                             fd.append('files', fileList[0]);
                             fd.append('attr', api_unique_block_name);
+                            fd.append('number', fileNumberElem.value);
 
                             if(fileList) {
                                 $.ajax({
@@ -83,6 +88,7 @@
 
                                     insertImage(data);
                                     insertAttrSrc(data);
+                                    fileNumberElem.value = data.number;
                                 }).fail(function(xhr, textStatus, errorThrown) {
                                     console.log(xhr);
                                     console.log(textStatus);

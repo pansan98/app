@@ -8,7 +8,7 @@ class TextAreaForm extends BaseBlockForm {
     public $template = 'textarea.blade.php';
     public $constraints = [];
     public $formName = 'テキストエリア';
-    public $rows;
+    public $rows = 5;
     
     public function formInit($options)
     {

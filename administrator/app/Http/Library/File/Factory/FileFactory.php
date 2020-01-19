@@ -5,6 +5,7 @@ use App\Http\Library\File\FileInterface\FileClientInterface;
 use App\Http\Library\File\FileFactory\FileErrorFactory;
 use App\Http\Library\File\Factory\Factory;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use App\Http\Helper\MediaHelper;
 
 class FileFactory implements FileClientInterface {
     
@@ -43,6 +44,8 @@ class FileFactory implements FileClientInterface {
             $this->_fileObj[$key]->setFileName($file[$key]['name'])->setFileType($file[$key]['type'])->setFileSize($file[$key]['size'])->setFileTmpName($file[$key]['tmp_name'])->setFileError($file[$key]->getError());
             $this->_fileObj[$key]->setFileExtension(end(explode('.', $this->_fileObj[$key]->getFileName())));
         }
+    
+        $this->_fileObj[$key]->setFileDirectory(MediaHelper::getFileDirectoryFromMimeType($this->_fileObj[$key]->getFileType()));
     }
     
     /**

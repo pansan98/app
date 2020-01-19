@@ -19,6 +19,8 @@ class Factory {
     
     protected $file_height;
     
+    protected $file_directory;
+    
     protected $file_error;
     
     /**
@@ -164,6 +166,25 @@ class Factory {
         $this->file_height = $height;
         
         return $this;
+    }
+    
+    /**
+     * @param $directory
+     * @return $this
+     */
+    public function setFileDirectory($directory)
+    {
+        $this->file_directory = $directory;
+        
+        return $this;
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function getFileDirectory()
+    {
+        return $this->file_directory;
     }
     
     /**
